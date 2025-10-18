@@ -34,3 +34,14 @@ Notes
 
 Contributions
 - Feel free to add more example files or small unit tests. If you submit PRs, ensure no compiled `.class` files are included.
+
+Interview prep
+- `INTERVIEW_PREP.md` - viva and interview questions with short model answers tailored to this repo.
+
+Contributing & helpers
+- `CONTRIBUTING.md` - contribution guidelines and quick rules.
+- `build.ps1` - Windows PowerShell helper to compile all `.java` files and optionally run a class. Usage:
+
+```powershell
+.\build.ps1 -runClass StudentGradeCalculator
+```

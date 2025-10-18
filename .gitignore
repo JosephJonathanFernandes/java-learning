@@ -34,3 +34,9 @@ Thumbs.db
 
 # Exclude jar if added
 *.jar
+
+# downloaded test tooling
+lib/*.jar
+
+# compiled output
+out/

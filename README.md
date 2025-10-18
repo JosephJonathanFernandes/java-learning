@@ -45,3 +45,11 @@ Contributing & helpers
 ```powershell
 .\build.ps1 -runClass StudentGradeCalculator
 ```
+
+- `build-and-test.ps1` - helper to compile sources and run JUnit 5 tests without Maven. Usage:
+
+```powershell
+.\build-and-test.ps1
+```
+
+Requirements: Java JDK (javac and java) on PATH. The script downloads the JUnit console jar into `lib/` and compiles to `out/`.

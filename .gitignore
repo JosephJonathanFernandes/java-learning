@@ -1,0 +1,36 @@
+# Java class files
+*.class
+
+# Compiled packages
+bin/
+build/
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Mac / Linux
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Maven / Gradle
+.settings/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*~
+
+# Machine generated files
+*.class
+
+# Exclude jar if added
+*.jar

@@ -1,20 +1,25 @@
 package com.example.learningjava.model;
 
-/** Represents a savings account with interest calculation. */
-public class SavingsAccount extends Account {
-  private final double interestRate;
+import com.example.learningjava.exceptions.InsufficientBalanceException;
+import com.example.learningjava.service.AccountService;
 
-  public SavingsAccount(String name, double deposit, double rate) {
-    super(name, deposit);
-    this.interestRate = rate;
+public class SavingsAccount extends Account implements AccountService {
+
+  @Override
+  public void calculateInterest() {
+    balance += balance * 0.04;
   }
 
-  public void addInterest() {
-    double interest = interestRate / 100 * getBalance();
-    deposit(interest);
+  @Override
+  public void deposit(double amount) {
+    super.deposit(amount);
   }
 
-  public double getInterestRate() {
-    return interestRate;
+  @Override
+  public void withdraw(double amount) throws InsufficientBalanceException {
+    if (amount > balance) {
+      throw new InsufficientBalanceException("Not enough money!");
+    }
+    balance -= amount;
   }
 }

@@ -7,7 +7,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class BankAccountSystem {
-  private static final Logger logger = Logger.getLogger(BankAccountSystem.class.getName());
+  private static final Logger LOGGER = Logger.getLogger(BankAccountSystem.class.getName());
+
+  // Menu options
+  private static final int DEPOSIT_OPTION = 1;
+  private static final int WITHDRAW_OPTION = 2;
+  private static final int VIEW_BALANCE_OPTION = 3;
+  private static final int EXIT_OPTION = 4;
+
+  // Configuration
+  private static final String CURRENCY_SYMBOL = "₹";
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
@@ -37,31 +46,25 @@ public class BankAccountSystem {
 
         try {
           switch (choice) {
-            case 1:
-              {
-                System.out.print("Enter amount: ");
-                double amt = sc.nextDouble();
-                sc.nextLine();
-                acc.deposit(amt);
-                logger.info("Deposited: " + amt);
-                break;
-              }
-            case 2:
-              {
-                System.out.print("Enter amount: ");
-                double amt = sc.nextDouble();
-                sc.nextLine();
-                acc.withdraw(amt);
-                logger.info("Withdrawn: " + amt);
-                break;
-              }
-            case 3:
-              {
-                System.out.println("\nAccount Holder: " + acc.getHolderName());
-                System.out.println("Balance: ₹" + acc.getBalance());
-                break;
-              }
-            case 4:
+            case DEPOSIT_OPTION:
+              System.out.print("Enter amount: ");
+              double amt = sc.nextDouble();
+              sc.nextLine();
+              acc.deposit(amt);
+              LOGGER.info("Deposited: " + amt);
+              break;
+            case WITHDRAW_OPTION:
+              System.out.print("Enter amount: ");
+              amt = sc.nextDouble();
+              sc.nextLine();
+              acc.withdraw(amt);
+              LOGGER.info("Withdrawn: " + amt);
+              break;
+            case VIEW_BALANCE_OPTION:
+              System.out.println("\nAccount Holder: " + acc.getHolderName());
+              System.out.println("Balance: " + CURRENCY_SYMBOL + acc.getBalance());
+              break;
+            case EXIT_OPTION:
               System.out.println("Goodbye!");
               break;
             default:
@@ -69,14 +72,14 @@ public class BankAccountSystem {
               break;
           }
         } catch (IllegalArgumentException e) {
-          logger.log(Level.WARNING, e.getMessage());
+          LOGGER.log(Level.WARNING, e.getMessage());
           System.out.println("Error: " + e.getMessage());
         }
 
-      } while (choice != 4);
+      } while (choice != EXIT_OPTION);
 
     } catch (InputMismatchException e) {
-      logger.log(Level.SEVERE, "Invalid input type.", e);
+      LOGGER.log(Level.SEVERE, "Invalid input type.", e);
       System.out.println("Invalid input. Exiting.");
     } finally {
       sc.close();

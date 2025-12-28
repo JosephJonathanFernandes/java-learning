@@ -1,9 +1,12 @@
 package com.example.learningjava.model;
 
-import com.example.learningjava.exceptions.InsufficientBalanceException;
 import com.example.learningjava.service.AccountService;
 
 public class SavingsAccount extends Account implements AccountService {
+
+  public SavingsAccount() {
+    super("Savings", 0.0);
+  }
 
   @Override
   public void calculateInterest() {
@@ -16,10 +19,23 @@ public class SavingsAccount extends Account implements AccountService {
   }
 
   @Override
-  public void withdraw(double amount) throws InsufficientBalanceException {
+  public void withdraw(double amount) {
     if (amount > balance) {
-      throw new InsufficientBalanceException("Not enough money!");
+      throw new IllegalArgumentException("Not enough money!");
     }
     balance -= amount;
+  }
+
+  @Override
+  public void transfer(Account from, Account to, double amount) {
+    if (amount <= 0) {
+      throw new IllegalArgumentException("Transfer amount must be positive");
+    }
+    try {
+      from.withdraw(amount);
+      to.deposit(amount);
+    } catch (IllegalArgumentException e) {
+      throw new IllegalArgumentException("Insufficient balance", e);
+    }
   }
 }

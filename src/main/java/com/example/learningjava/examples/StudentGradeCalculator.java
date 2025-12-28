@@ -12,13 +12,12 @@ public class StudentGradeCalculator {
     System.out.print("Enter marks: ");
     int marks = sc.nextInt();
 
-    Student s = new Student();
-    s.setName(name);
-    s.setMarks(marks);
+    Student s = new Student(name, 1);
+    s.setMarks(new int[] {marks});
 
     System.out.println("\n--- Result ---");
     System.out.println("Name: " + s.getName());
-    System.out.println("Marks: " + s.getMarks());
+    System.out.println("Marks: " + java.util.Arrays.toString(s.getMarks()));
 
     sc.close();
   }

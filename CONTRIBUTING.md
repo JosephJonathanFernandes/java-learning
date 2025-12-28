@@ -24,7 +24,7 @@ We welcome contributions to this open-source Java learning project! Please follo
 ## Development Setup
 
 1. Ensure Java 17+ and Maven are installed.
-2. Clone the repo: `git clone https://github.com/your-org/java-learning.git`.
+2. Clone the repo: `git clone https://github.com/JosephJonathanFernandes/java-learning.git`.
 3. Run `mvn clean compile` to build.
 4. Run `mvn test` to execute tests.
 

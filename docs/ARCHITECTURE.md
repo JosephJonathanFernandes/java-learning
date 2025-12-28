@@ -28,15 +28,17 @@ This project is designed for clarity, modularity, and security, following profes
 ```
 java-learning/
 ├── src/main/java/com/example/learningjava/
-│   ├── model/      # Business entities (Student, Account, etc.)
-│   ├── service/    # Business logic/services (AccountService, etc.)
+│   ├── model/      # Business entities (Student, Account, SavingsAccount)
+│   ├── service/    # Business logic/services (AccountService)
 │   └── examples/   # Executable demos (CLI apps)
-├── tests/          # Unit & integration tests (mirrors src/)
+├── src/test/java/  # Unit & integration tests (mirrors src/)
 ├── docs/           # Architecture, security, dev experience
 ├── config/         # Environment and config files
 ├── scripts/        # Automation/build scripts
 ├── .env.example    # Environment variable template
-└── pom.xml         # Maven config
+├── pom.xml         # Maven config
+├── checkstyle.xml  # Code style configuration
+└── README.md       # Project documentation
 ```
 
 ## Principles

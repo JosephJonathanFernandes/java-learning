@@ -23,7 +23,7 @@ public class StudentTest {
   @Test
   void testCalculateGradeB() {
     Student s = new Student("Chris", 2);
-    s.setMarks(new int[] {80, 76});
+    s.setMarks(new int[] {85, 82});
     assertEquals("B", s.calculateGrade());
   }
 

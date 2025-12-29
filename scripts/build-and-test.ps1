@@ -6,7 +6,7 @@ param(
     [string]$junitJar = "junit-platform-console-standalone.jar"
 )
 
-$root = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 Set-Location $root
 
 $libDir = Join-Path $root "lib"

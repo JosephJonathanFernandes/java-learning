@@ -14,7 +14,7 @@ class BankAccountSystemIntegrationTest {
     InputStream originalIn = System.in;
     System.setIn(new ByteArrayInputStream(simulatedInput.getBytes()));
     try {
-      com.example.learningjava.examples.BankAccountSystem.main(new String[] {});
+      com.example.learningjava.examples.banking.BankAccountSystem.main(new String[] {});
       // No exception = pass (for demo; real test would capture output)
     } finally {
       System.setIn(originalIn);

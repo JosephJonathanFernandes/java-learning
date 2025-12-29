@@ -2,8 +2,8 @@ package service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.example.learningjava.model.Account;
-import com.example.learningjava.model.SavingsAccount;
+import com.example.learningjava.examples.banking.Account;
+import com.example.learningjava.examples.banking.SavingsAccount;
 import org.junit.jupiter.api.Test;
 
 class AccountServiceTest {

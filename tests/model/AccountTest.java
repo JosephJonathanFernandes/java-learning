@@ -2,7 +2,7 @@ package model;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.example.learningjava.model.Account;
+import com.example.learningjava.examples.banking.Account;
 import org.junit.jupiter.api.Test;
 
 class AccountTest {

@@ -1,4 +1,4 @@
-package com.example.learningjava.examples;
+package com.example.learningjava.examples.collections;
 
 import com.example.learningjava.model.Student;
 import java.util.HashMap;

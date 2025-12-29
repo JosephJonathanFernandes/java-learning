@@ -20,7 +20,7 @@ if (!(Test-Path $jarPath)) {
 }
 
 $srcMain = Join-Path $root "src\main\java"
-$srcTest = Join-Path $root "src\test\java"
+$srcTest = Join-Path $root "tests"
 $buildDir = Join-Path $root "out"
 if (Test-Path $buildDir) { Remove-Item -Recurse -Force $buildDir }
 New-Item -ItemType Directory -Path $buildDir | Out-Null

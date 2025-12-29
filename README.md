@@ -1,192 +1,127 @@
+# Java Learning Repository
 
-# Java Learning Examples
+A comprehensive Java learning repository organized by topics for educational purposes. This repository provides hands-on examples and demonstrations of Java concepts from basics to advanced topics.
 
-[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://openjdk.java.net/)
-[![Maven](https://img.shields.io/badge/Maven-3.x-red.svg)](https://maven.apache.org/)
-[![JUnit](https://img.shields.io/badge/JUnit-5-green.svg)](https://junit.org/junit5/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+## 📁 Repository Structure
 
-Professional, modular, and secure Java codebase for learning and demonstrating core programming concepts. Built to enterprise-grade standards with comprehensive testing, security, and documentation.
+### 📚 `src/main/java/com/example/learningjava/examples/`
 
-## 🎯 Problem
+#### 🔰 `basics/` - Java Fundamentals
+- **Hello.java** - Basic "Hello World" program
+- **HelloWorld.java** - Alternative hello world implementation
+- **A.java** - Variable declarations and basic operations
+- **IfElseDemo.java** - Conditional statements (if-else)
+- **LoopDemo.java** - Different types of loops (for, while, do-while)
+- **MethodDemo.java** - Method definitions and calls
+- **InputDemo.java** - User input handling with Scanner
+- **Calculator.java** - Basic arithmetic operations
+- **ArrayDemo.java** - Array operations and manipulations
 
-Learning Java from scattered code leads to bad habits and confusion. This project provides a clean, enterprise-ready structure for:
-- Practicing Java fundamentals and OOP principles
-- Demonstrating SOLID, Clean Code, and security best practices
-- Showcasing professional, production-grade code for recruiters and contributors
+#### 🏗️ `oop/` - Object-Oriented Programming
+- **ConstructorDemo.java** - Constructor types and initialization
+- **ThisDemo.java** - 'this' keyword usage
+- **InheritanceDemo.java** - Class inheritance and super keyword
+- **OverrideDemo.java** - Method overriding and polymorphism
+- **OOPDemo.java** - Complete OOP concepts demonstration
+- **StudentManager.java** - Object management and collections
+- **StudentGradeCalculator.java** - OOP with business logic
 
-## 🏗️ Architecture
+#### 📊 `collections/` - Collections Framework
+- **ListDemo.java** - ArrayList operations
+- **SetDemo.java** - HashSet operations
+- **MapDemo.java** - HashMap operations
+- **ComparableDemo.java** - Natural ordering with Comparable
+- **ComparatorDemo.java** - Custom sorting with Comparator
+- **ComparatorByName.java** - Custom comparator implementation
+- **Student.java** - Model class for collection examples
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for full details.
+#### 🌊 `streams/` - Java 8+ Streams API
+- **StreamFilterDemo.java** - Filtering operations with streams
+- **StreamMapDemo.java** - Mapping transformations
+- **StreamReduceDemo.java** - Reduction operations (sum, min, max, etc.)
+- **LambdaSortDemo.java** - Lambda expressions with sorting
 
-**Core Layers:**
-- `model/`: Business entities (Student, Account, SavingsAccount)
-- `service/`: Business logic and calculations (AccountService)
-- `examples/`: Executable demos and CLI applications
+#### ⚠️ `exceptions/` - Exception Handling
+- **ExceptionDemo.java** - Try-catch blocks and exception types
+- **InsufficientBalanceException.java** - Custom exception class
 
-**Key Principles:** SOLID, DRY, separation of concerns, configuration-driven, secure by default
+#### 🏦 `banking/` - Real-world Application
+- **Account.java** - Base account class
+- **SavingsAccount.java** - Inheritance and banking logic
+- **AccountService.java** - Service layer interface
+- **BankAccountSystem.java** - Complete banking application
 
-## 🛠️ Tech Stack
+#### 🎯 `practice/` - Practice Exercises
+- **Practice.java** - Mixed coding challenges and exercises
 
-- **Java 17+** - Modern Java with latest features
-- **Maven 3.x** - Build automation and dependency management
-- **JUnit 5** - Comprehensive testing framework
-- **Checkstyle & Spotless** - Code quality and formatting
-- **GitHub Actions** - CI/CD pipeline
-
-## ✨ Features
-
-- 🏢 **Enterprise-grade structure** with proper separation of concerns
-- 🔒 **Security-first approach** (no hardcoded secrets, input validation)
-- 🧪 **Comprehensive testing** with 80%+ coverage goal
-- 📚 **Professional documentation** and architecture guides
-- 🚀 **Easy to run, extend, and contribute** to
-- 🎯 **Learning-focused** with practical examples
-
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
-- Java JDK 17 or higher
-- Maven 3.x or higher
-
-### Installation
-
-```bash
-git clone https://github.com/JosephJonathanFernandes/java-learning.git
-cd java-learning
-mvn clean compile
-```
+- Java 17 or higher
+- Maven 3.6+
 
 ### Running Examples
 
+1. Clone the repository:
 ```bash
-# Run the student grade calculator example
-mvn exec:java -Dexec.mainClass="com.example.learningjava.examples.StudentGradeCalculator"
-
-# Run the bank account system example
-mvn exec:java -Dexec.mainClass="com.example.learningjava.examples.BankAccountSystem"
-
-# Run the calculator example
-mvn exec:java -Dexec.mainClass="com.example.learningjava.examples.Calculator"
+git clone https://github.com/JosephJonathanFernandes/java-learning.git
+cd java-learning
 ```
 
-### Running Tests
-
+2. Compile the project:
 ```bash
-mvn test
+mvn compile
 ```
 
-### Building the Project
-
+3. Run any example (replace `ExampleClass` with the actual class name):
 ```bash
-mvn clean package
+java -cp target/classes com.example.learningjava.examples.basics.Hello
 ```
 
-## 💡 Usage Examples
+## 📖 Learning Path
 
-### Student Grade Calculator
-```java
-import com.example.learningjava.model.Student;
+1. **Start with `basics/`** - Learn fundamental Java syntax and concepts
+2. **Move to `oop/`** - Understand object-oriented programming principles
+3. **Explore `collections/`** - Master data structures and algorithms
+4. **Dive into `streams/`** - Learn modern Java functional programming
+5. **Handle errors with `exceptions/`** - Exception handling and custom exceptions
+6. **Build applications in `banking/`** - Real-world application development
+7. **Practice with `practice/`** - Reinforce learning through exercises
 
-public class Example {
-    public static void main(String[] args) {
-        // Create a student with name and number of subjects
-        Student student = new Student("Alice", 3);
+## 🛠️ Technologies Used
 
-        // Set marks for the subjects
-        student.setMarks(new int[]{90, 85, 88});
+- **Java 17** - Programming language
+- **Maven** - Build automation and dependency management
+- **JUnit** - Unit testing framework
+- **Checkstyle** - Code quality checks
+- **Spotless** - Code formatting
+- **JaCoCo** - Code coverage reporting
 
-        // Calculate and display results
-        System.out.println("Student: " + student.getName());
-        System.out.println("Average: " + student.calculateAverage());
-        System.out.println("Grade: " + student.calculateGrade());
-    }
-}
-```
+## 📋 Code Quality
 
-## 📁 Project Structure
+This project maintains high code quality standards:
 
-```
-java-learning/
-├── src/main/java/com/example/learningjava/
-│   ├── model/          # Business models/entities
-│   │   ├── Account.java
-│   │   ├── Student.java
-│   │   └── SavingsAccount.java
-│   ├── service/        # Business logic/services
-│   │   └── AccountService.java
-│   └── examples/       # Executable examples/demos
-│       ├── BankAccountSystem.java
-│       ├── Calculator.java
-│       ├── StudentGradeCalculator.java
-│       └── ... (other examples)
-├── src/test/java/      # Unit and integration tests
-├── docs/               # Comprehensive documentation
-│   ├── ARCHITECTURE.md
-│   ├── SECURITY.md
-│   ├── DEV_EXPERIENCE.md
-│   └── ...
-├── scripts/            # Build and automation scripts
-├── config/             # Configuration files
-├── .env.example        # Environment variable template
-├── pom.xml             # Maven configuration
-├── checkstyle.xml      # Code style configuration
-└── README.md           # This file
-```
-
-## 🔒 Security
-
-- ✅ No hardcoded secrets (environment-driven configuration)
-- ✅ Input validation and comprehensive error handling
-- ✅ Secure coding practices throughout
-- 📖 See [docs/SECURITY.md](docs/SECURITY.md) for detailed security policy
-
-## 🧪 Testing
-
-- **JUnit 5** for all unit and integration tests
-- **JaCoCo** for test coverage reporting
-- **Coverage goal**: 80%+ for business logic
-- **Example**: See `src/test/java/com/example/learningjava/model/StudentTest.java`
-
-## 🔧 Development Tools
-
-### Code Quality & Formatting
-- **Checkstyle** - Static code analysis (configured in `checkstyle.xml`)
-- **Spotless** - Code formatting with Google Java Format
-- **Pre-commit hooks** - Automated quality checks (see `docs/DEV_EXPERIENCE.md`)
-
-### CI/CD Pipeline
-- **GitHub Actions** - Automated build, test, and lint on every push/PR
-- **Quality gates** - Build fails on code style violations or test failures
+- **Checkstyle** - Enforces coding standards and best practices
+- **Spotless** - Ensures consistent code formatting
+- **Unit Tests** - Comprehensive test coverage
+- **Documentation** - Well-commented code examples
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+Feel free to contribute by:
+- Adding new examples and demonstrations
+- Improving existing code and documentation
+- Fixing bugs and issues
+- Enhancing the learning experience
 
-**Quick contribution steps:**
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes following our coding standards
-4. Add/update tests as needed
-5. Run `mvn clean test` to ensure everything works
-6. Commit your changes (`git commit -m "Add: amazing feature"`)
-7. Push to your branch and create a Pull Request
+## 📄 License
 
-## 📚 Documentation
+This project is open source and available under the [MIT License](LICENSE).
 
-- 📋 **[Architecture Guide](docs/ARCHITECTURE.md)** - System design and principles
-- 🔒 **[Security Policy](docs/SECURITY.md)** - Security guidelines and vulnerability reporting
-- 🛠️ **[Developer Experience](docs/DEV_EXPERIENCE.md)** - Setup and development workflow
-- 📝 **[Changelog](docs/CHANGELOG.md)** - Version history and updates
-- 🎯 **[Interview Prep](docs/INTERVIEW_PREP.md)** - Java interview preparation guide
+## 📞 Contact
 
-## 🎯 Value Proposition
-
-- **👨‍🎓 Learners**: Learn best practices, not just syntax
-- **👔 Recruiters**: See real-world, production-grade Java code
-- **👥 Contributors**: Easy to extend, review, and maintain codebase
-- **🏢 Enterprises**: Reference implementation for Java standards
+For questions or suggestions, please open an issue on GitHub.
 
 ---
 
-*Built for the Java community — professional, secure, and open source.* 🚀
+**Happy Learning! 🎓**

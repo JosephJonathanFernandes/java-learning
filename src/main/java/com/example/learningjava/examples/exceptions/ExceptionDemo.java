@@ -1,4 +1,4 @@
-package com.example.learningjava.examples;
+package com.example.learningjava.examples.exceptions;
 
 /** Exception demonstration class. */
 public final class ExceptionDemo {

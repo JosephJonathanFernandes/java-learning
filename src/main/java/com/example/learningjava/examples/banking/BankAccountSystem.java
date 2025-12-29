@@ -1,6 +1,4 @@
-package com.example.learningjava.examples;
-
-import com.example.learningjava.model.SavingsAccount;
+package com.example.learningjava.examples.banking;
 
 public class BankAccountSystem {
 

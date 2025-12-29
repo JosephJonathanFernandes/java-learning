@@ -1,4 +1,4 @@
-package com.example.learningjava.examples;
+package com.example.learningjava.examples.basics;
 
 class ArrayDemo {
   public static void main(String[] args) {

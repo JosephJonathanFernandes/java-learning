@@ -1,6 +1,4 @@
-package com.example.learningjava.model;
-
-import com.example.learningjava.service.AccountService;
+package com.example.learningjava.examples.banking;
 
 public class SavingsAccount extends Account implements AccountService {
 

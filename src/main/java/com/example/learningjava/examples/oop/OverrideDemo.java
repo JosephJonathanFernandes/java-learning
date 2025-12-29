@@ -1,4 +1,4 @@
-package com.example.learningjava.examples;
+package com.example.learningjava.examples.oop;
 
 class Animal {
   void sound() {

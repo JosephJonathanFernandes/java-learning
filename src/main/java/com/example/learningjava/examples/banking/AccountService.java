@@ -1,7 +1,6 @@
-package com.example.learningjava.service;
+package com.example.learningjava.examples.banking;
 
-import com.example.learningjava.exceptions.InsufficientBalanceException;
-import com.example.learningjava.model.Account;
+import com.example.learningjava.examples.exceptions.InsufficientBalanceException;
 
 public interface AccountService {
 

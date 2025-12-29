@@ -1,4 +1,4 @@
-package com.example.learningjava.model;
+package com.example.learningjava.examples.banking;
 
 public class Account {
 

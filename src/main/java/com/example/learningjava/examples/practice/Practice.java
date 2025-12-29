@@ -1,4 +1,4 @@
-package com.example.learningjava.examples;
+package com.example.learningjava.examples.practice;
 
 class Add {
   static void run() {

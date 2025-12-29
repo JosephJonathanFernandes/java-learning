@@ -1,4 +1,4 @@
-package com.example.learningjava.exceptions;
+package com.example.learningjava.examples.exceptions;
 
 public class InsufficientBalanceException extends Exception {
 

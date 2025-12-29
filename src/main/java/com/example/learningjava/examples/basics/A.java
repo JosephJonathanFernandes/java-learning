@@ -1,4 +1,4 @@
-package com.example.learningjava.examples;
+package com.example.learningjava.examples.basics;
 
 class Account {
   private double balance = 0;

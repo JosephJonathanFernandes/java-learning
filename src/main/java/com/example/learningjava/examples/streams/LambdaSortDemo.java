@@ -1,5 +1,6 @@
-package com.example.learningjava.examples.collections;
+package com.example.learningjava.examples.streams;
 
+import com.example.learningjava.examples.collections.Student;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

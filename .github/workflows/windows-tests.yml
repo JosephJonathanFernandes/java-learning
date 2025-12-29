@@ -19,4 +19,4 @@ jobs:
         java-version: '17'
     - name: Run tests with PowerShell script
       shell: pwsh
-      run: .\\build-and-test.ps1
+      run: .\\scripts\\build-and-test.ps1
